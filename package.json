@@ -1,0 +1,36 @@
+{
+  "name": "tanstack-example-jokes",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrutikapoor08/tanstack-example-jokes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrutikapoor08/tanstack-example-jokes/issues"
+  },
+  "homepage": "https://github.com/shrutikapoor08/tanstack-example-jokes#readme",
+  "description": "",
+  "dependencies": {
+    "@tanstack/react-router": "^1.106.0",
+    "@tanstack/start": "^1.106.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vinxi": "^0.5.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

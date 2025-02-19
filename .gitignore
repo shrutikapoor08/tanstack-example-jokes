@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.output/
+.cache/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Development tools
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Testing
+coverage/
+.nyc_output/
+
+# Runtime data
+count.txt
+
+# Temporary files
+*.swp
+*.swo
+.temp
+.tmp
