@@ -8,6 +8,11 @@ build/
 .output/
 .cache/
 
+# Generated files
+*.gen.ts
+*.gen.tsx
+routeTree.gen.ts
+
 # Environment variables
 .env
 .env.*
