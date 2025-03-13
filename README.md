@@ -30,12 +30,12 @@ Learn how to:
 
 ### 3. Styling with Tailwind
   [✅] Add tailwind
-  [] style nicely with tailwind
-  [] Fix TS issues
+  [✅] style nicely with tailwind
+  [✅] Fix TS issues
+  [✅] Ensure jokes have an id, and match the rest of the json file
   [] Clean up and refactor
-  [] Ensure jokes have an id, and match the rest of the json file
   [] Add nice jokes
-  [] Best practices of building a tutorial code. Check other people's repos - maybe Kent or Eve. 
+  [] Best practices of building a tutorial code.
   [] Add error component
   [] Test manually
   [] Write tests?
@@ -69,7 +69,7 @@ npm run dev
 │   │   ├── __root.tsx    # Root layout
 │   │   └── index.tsx     # Home page
 │   ├── serverFunctions/
-│   │   └── getJokes.ts   # Server functions for joke operations
+│   │   └── getJokes.ts   # Server functions for joke operations      
 │   ├── router.tsx        # Router configuration
 │   └── ssr.tsx          # Server-side rendering setup
 ├── jokes.json           # Data storage

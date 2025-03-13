@@ -105,7 +105,7 @@ function Home() {
             />
 
             <Button
-              className="hover:bg-gray-600 m-2"
+              className="hover:bg-gray-00 m-2"
               onClick={() => {
                 updatejokes({
                   data: {
