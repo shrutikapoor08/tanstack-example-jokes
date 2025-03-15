@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/start";
-import { readJokes, addJoke } from "../services/jokeService";
+import { readJokes, addJoke } from "./jokeService";
 
 export const getJokesAction = createServerFn({
   method: "GET",

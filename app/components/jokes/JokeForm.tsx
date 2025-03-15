@@ -13,17 +13,17 @@ export function JokeForm() {
 
   const handleSubmit = async () => {
     if (!question || !answer || isSubmitting) return;
-    
+
     try {
       setIsSubmitting(true);
       await addJokeAction({
         data: { question, answer },
       });
-      
+
       // Clear form
       setQuestion("");
       setAnswer("");
-      
+
       // Refresh data
       router.invalidate();
     } catch (error) {
