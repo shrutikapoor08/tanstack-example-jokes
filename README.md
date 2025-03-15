@@ -12,7 +12,7 @@ TanStack Start is a framework for building full-stack React applications. It pro
 
 ## Tutorial Steps
 
-### ✅ 1. Basic Setup
+### 1. Basic Setup
 Learn how to:
 - Set up a new TanStack Start project
 - Configure the development environment
@@ -28,22 +28,6 @@ Learn how to:
 - Handle form submissions
 - Update UI based on server responses
 
-### 3. Styling with Tailwind
-  [✅] Add tailwind
-  [✅] style nicely with tailwind
-  [✅] Fix TS issues
-  [✅] Ensure jokes have an id, and match the rest of the json file
-  [] Clean up and refactor
-  [] Add nice jokes
-  [] Best practices of building a tutorial code.
-  [] Add error component
-  [] Test manually
-  [] Write tests?
-
-
-For me - 
-[] How does TanStack Start define where the server -ssr.tsx and where the client is. - client.tsx
-[] Read tutorials to watch how other people do it. -> fir styles and understanding how tanstack start works
 ## Getting Started
 
 1. Clone this repository:
