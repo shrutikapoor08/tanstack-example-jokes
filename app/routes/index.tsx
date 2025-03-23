@@ -2,6 +2,7 @@ import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { getJokesAction, addJokeAction } from "../server/jokeActions";
 import { JokeForm } from "@/components/jokes/JokeForm";
 import { JokeList } from "@/components/jokes/JokeList";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -20,6 +21,10 @@ function Home() {
     router.invalidate();
   };
 
+  const handleSubscribe = () => {
+    console.log("Subscribed!");
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-muted">
       <div className="container px-4 py-8 mx-auto max-w-4xl">
@@ -34,7 +39,26 @@ function Home() {
           <JokeForm />
         </header>
 
-        <JokeList jokes={jokes} />
+        <section className="mb-8">
+          <JokeList jokes={jokes} />
+        </section>
+
+        <section className="mb-8">
+          <h3>
+            Subscribe to our newsletter to get the latest jokes delivered to
+            your inbox.
+          </h3>
+          <form className="flex flex-row gap-2 w-full">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="input"
+            />
+            <Button className="btn" onClick={handleSubscribe}>
+              Subscribe
+            </Button>
+          </form>
+        </section>
       </div>
     </main>
   );

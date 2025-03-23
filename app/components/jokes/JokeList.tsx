@@ -15,7 +15,7 @@ export function JokeList({ jokes }: JokeListProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div role="list" className="space-y-6" aria-label="Developer Jokes">
       {jokes.map((joke) => (
         <JokeCard key={joke.id} joke={joke} />
       ))}
