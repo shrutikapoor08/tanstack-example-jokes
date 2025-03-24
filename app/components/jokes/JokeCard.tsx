@@ -1,12 +1,20 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Joke } from "../../types";
+import { useRef } from "react";
 
 interface JokeCardProps {
   joke: Joke;
+  listTabIndex?: number;
 }
 
-export function JokeCard({ joke }: JokeCardProps) {
+export function JokeCard({
+  joke,
+  listTabIndex = 0,
+  onFocus,
+  ref,
+  ...props
+}: JokeCardProps) {
   const handleLike = () => {
     console.log("Liked joke:", joke.id);
   };
@@ -19,7 +27,10 @@ export function JokeCard({ joke }: JokeCardProps) {
     <Card
       role="listitem"
       className="overflow-hidden transition-all hover:shadow-md mb-6"
-      tabIndex={0}
+      tabIndex={listTabIndex}
+      onFocus={onFocus}
+      ref={ref}
+      {...props}
     >
       <CardHeader className="pb-2">
         <CardTitle id="joke-label-{`${joke.id}`}" className="text-xl">
@@ -27,9 +38,9 @@ export function JokeCard({ joke }: JokeCardProps) {
         </CardTitle>
       </CardHeader>
       <CardContent className="py-2">
-        <p className="leading-relaxed">Answer: {joke.answer}</p>
-        <Button onClick={handleLike}>Like</Button>
-        <Button onClick={handleDislike}>Dislike</Button>
+        Answer: {joke.answer}
+        {/* <Button onClick={handleLike}>Like</Button>
+        <Button onClick={handleDislike}>Dislike</Button> */}
       </CardContent>
     </Card>
   );
