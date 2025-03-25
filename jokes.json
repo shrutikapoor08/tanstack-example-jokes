@@ -154,6 +154,16 @@
       "id": "67e18c53-68de-4c47-839c-b23e533c9662",
       "question": "hello",
       "answer": "NEW JOKE"
+    },
+    {
+      "id": "ed915eac-1fab-4496-b495-35cee6e79578",
+      "question": "How do you comfort a JavaScript bug?",
+      "answer": "You console it!"
+    },
+    {
+      "id": "6b2d3174-bebb-4cce-8c66-08378cbd00aa",
+      "question": "What did the terminal say to GitHub?",
+      "answer": "git outta here"
     }
   ]
 }
