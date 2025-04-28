@@ -11,9 +11,16 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ChuckNorrisImport } from './routes/chuck-norris'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const ChuckNorrisRoute = ChuckNorrisImport.update({
+  id: '/chuck-norris',
+  path: '/chuck-norris',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -32,6 +39,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/chuck-norris': {
+      id: '/chuck-norris'
+      path: '/chuck-norris'
+      fullPath: '/chuck-norris'
+      preLoaderRoute: typeof ChuckNorrisImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -39,32 +53,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/chuck-norris': typeof ChuckNorrisRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/chuck-norris': typeof ChuckNorrisRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/chuck-norris': typeof ChuckNorrisRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/chuck-norris'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/chuck-norris'
+  id: '__root__' | '/' | '/chuck-norris'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChuckNorrisRoute: typeof ChuckNorrisRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChuckNorrisRoute: ChuckNorrisRoute,
 }
 
 export const routeTree = rootRoute
@@ -77,11 +96,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/chuck-norris"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/chuck-norris": {
+      "filePath": "chuck-norris.tsx"
     }
   }
 }

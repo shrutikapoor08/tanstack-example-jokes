@@ -12,6 +12,7 @@ build/
 *.gen.ts
 *.gen.tsx
 routeTree.gen.ts
+app/routeTree.gen.ts
 
 # Environment variables
 .env

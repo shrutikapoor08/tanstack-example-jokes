@@ -16,3 +16,12 @@ export const addJokeAction = createServerFn({
   await addJoke(data.question, data.answer);
   return { success: true };
 });
+
+export const getJokesFromChuckNorrisAPI = createServerFn({
+  method: "GET" 
+}).handler(async () => {
+  const response = await fetch("https://api.chucknorris.io/jokes/random");
+  const joke = await response.json();
+  return { value: joke?.value , icon_url: joke?.icon_url };
+});
+
